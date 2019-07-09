@@ -12,6 +12,16 @@ var problem = "split this string into words and print them on separate lines"
 // Your code
 ```
 
+```
+var problem = "split this string into words and print them on separate lines"
+
+
+var theOutput = "split\nthis\nstring\ninto\nwords\nand\nprint\nthem\non\nseparate\nlines"
+
+print(theOutput)
+```
+
+
 Example
 
 Input:
@@ -41,7 +51,29 @@ Given a string `testString` create a new variable called `condensedString` that 
 let testString = "  How   about      thesespaces  ?  "
 //condensedString = " How about thesespaces ? "
 ```
+```
+let testString = "  How   about      thesespaces  ?  "
+var condensedString = ""
+var theArray = [String]()
+var whatever = ""
 
+for i in testString {
+if i == " " {
+theArray.append(whatever)
+whatever = ""
+
+}
+whatever += String(i)
+//    print(character, terminator: "")
+
+}
+for i in theArray {
+if i != " " && i !=  "" {
+condensedString += i
+}
+}
+print(condensedString)
+```
 
 ## Question 3
 
@@ -53,6 +85,18 @@ Sample Input: `"Swift is the best language"`
 
 Sample Output: `"language best the is Swift"`
 
+```
+Var sampleString = "Swift is the best language"
+var sampleStringArray = sampleString.components(separatedBy: " ")
+var reversedStringArray: [String] = sampleStringArray.reversed()
+var reversedString = ""
+
+for word in reversedStringArray {
+reversedString += word + " "
+}
+
+print(reversedString)
+```
 
 ## Question 4
 
