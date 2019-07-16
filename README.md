@@ -9,16 +9,12 @@ You are given a string stored in variable `problem`. Write code so that you prin
 ```swift
 var problem = "split this string into words and print them on separate lines"
 
-// Your code
 ```
 
 ```
 var problem = "split this string into words and print them on separate lines"
 
-
-var theOutput = "split\nthis\nstring\ninto\nwords\nand\nprint\nthem\non\nseparate\nlines"
-
-print(theOutput)
+print(problem.replacingOccurrences(of: " ", with: "\n"))tring\ninto\nwords\nand\nprint\nthem\non\nseparate\nlines"
 ```
 
 
@@ -107,6 +103,26 @@ Example:
 Sample Input: `"danaerys dad cat civic bottle"`
 
 Sample Output: `2`
+``
+```
+let string = "danaerys dad cat civic bottle"
+
+var breakUpTheString = string.components(separatedBy: " ")
+
+
+var count = 0
+
+var reversedString = String(string.reversed())
+string == reversedString
+
+for i in breakUpTheString {
+if  i == String(i.reversed()) {
+count += 1
+}
+}
+print(count)
+
+```
 
 
 ## Question 5
